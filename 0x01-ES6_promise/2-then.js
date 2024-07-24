@@ -2,7 +2,7 @@
 // solution from the api to console
 
 function handleResponseFromAPI(promise) {
-  promise
+  return promise
     .then(() => ({
       status: 200,
       body: 'success',
