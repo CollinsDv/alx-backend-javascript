@@ -3,7 +3,7 @@
 // accepts one attribute maxStudentSize(number), assigned to _maxStudentSize
 
 export default class ClassRoom {
-  constructor(maxStudentSize) {
-    this._maxStudentSize = maxStudentSize;
+  constructor(maxStudentsSize) {
+    this._maxStudentsSize = maxStudentsSize;
   }
 }
