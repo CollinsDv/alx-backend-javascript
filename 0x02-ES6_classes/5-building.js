@@ -9,13 +9,18 @@
 // If a class that extends from it does not have a evacuationWarningMessage method,
 // throw an error with the message Class extending Building must override evacuationWarningMessage
 
+// Building.js
 export default class Building {
   constructor(sqft) {
-    this._sqft = sqft;
-
-    if (this.evacuationWarningMessage === undefined) {
-      throw new Error('Class extending Building must override evacuationWarningMessage');
+    if (this.constructor !== Building) {
+      if (typeof this.evacuationWarningMessage !== 'function') {
+        throw new Error(
+          'Class extending Building must override evacuationWarningMessage',
+        );
+      }
     }
+
+    this._sqft = sqft;
   }
 
   get sqft() {
