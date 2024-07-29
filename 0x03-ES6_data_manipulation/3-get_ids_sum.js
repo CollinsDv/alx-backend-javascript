@@ -5,5 +5,5 @@
 // You must use the reduce function on the array.
 
 export default function getStudentIdsSum(students) {
-  return students.reduce((sum, id) => sum + id)
+  return students.reduce((sum, student) => sum + student.id, 0);
 }
